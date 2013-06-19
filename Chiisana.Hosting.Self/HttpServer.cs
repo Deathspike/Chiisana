@@ -228,16 +228,10 @@ namespace Chiisana.Hosting.Self {
 						Task InParallel = Task.Run(async () => {
 							// Initialize new instances of the NetworkStream classes.
 							Stream Stream = new NetworkStream(Socket, true);
-							// Set the value, in milliseconds, that determines how long the stream will attempt to read before timing out.
-							Stream.ReadTimeout = _Settings.ReadTimeout;
-							Socket.ReceiveTimeout = _Settings.ReadTimeout;
-
-
-							System.Threading.Thread.Sleep(2000);
 							// Attempt the following code.
 							try {
 								// Initialize new instances of the BufferedStream classes.
-								// Stream = new BufferedStream(Stream);
+								Stream = new BufferedStream(Stream);
 								// Check if a certificate is available 
 								if (_Settings.Certificate != null) {
 									// Initialise SslStream and instruct it to supersede the network stream.
