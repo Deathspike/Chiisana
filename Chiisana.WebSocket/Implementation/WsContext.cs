@@ -56,9 +56,9 @@ namespace Chiisana.WebSocket {
 					System.Buffer.BlockCopy(Length, 0, Transfer, 2, 2);
 				} else {
 					// Initialize the length.
-					byte[] Length = BitConverter.GetBytes(PayloadLength);
+					byte[] Length = BitConverter.GetBytes((long)PayloadLength);
 					// Initialize the transfer buffer.
-					Transfer = new byte[9];
+					Transfer = new byte[10];
 					// Set the payload length.
 					Transfer[1] = 127;
 					// Check if this computer is using little endian byte order.
