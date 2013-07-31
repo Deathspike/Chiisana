@@ -25,7 +25,7 @@ namespace Chiisana.Hosting.Self {
 		/// <summary>
 		/// Contains the protocol version used by the requesting client.
 		/// </summary>
-		private readonly ProtocolVersion _ProtocolVersion;
+		private readonly Protocol _ProtocolVersion;
 
 		#region Constructor
 		/// <summary>
@@ -35,7 +35,7 @@ namespace Chiisana.Hosting.Self {
 		/// <param name="Settings">The collection of HTTP server settings.</param>
 		public HttpContextResponse(IContextRequest Request, HttpServerSettings Settings) {
 			// Set the protocol version used by the requesting client.
-			_ProtocolVersion = Request.ProtocolVersion;
+			_ProtocolVersion = Request.Protocol;
 			// Set the collection of cookies returned with the response.
 			this.Cookies = new HttpCookieCollection(Request, Settings.Certificate != null);
 			// Set the collection of response headers. 
@@ -122,11 +122,11 @@ namespace Chiisana.Hosting.Self {
 				// Initialize the header.
 				string Header = Headers["Connection"];
 				// Return the status indicating whether the server requests a persistent connection.
-				return _ProtocolVersion == ProtocolVersion.Http11 && Header == null || Header.Equals("Keep-Alive", StringComparison.OrdinalIgnoreCase);
+				return _ProtocolVersion == Protocol.Http11 && Header == null || Header.Equals("Keep-Alive", StringComparison.OrdinalIgnoreCase);
 			}
 			set {
 				// Check if the protocol version supports persistent connections.
-				if (_ProtocolVersion == ProtocolVersion.Http11) {
+				if (_ProtocolVersion == Protocol.Http11) {
 					// Check if the server requests a persistent connection.
 					if (value) {
 						// Remove the connection header.

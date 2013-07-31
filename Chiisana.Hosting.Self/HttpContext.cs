@@ -54,7 +54,7 @@ namespace Chiisana.Hosting.Self {
 				// Initialize each header.
 				string[] Headers = new string[Response.Cookies.Count + Response.Headers.Count + 4];
 				// Set the response line.
-				Headers[Index++] = "HTTP/" + (Request.ProtocolVersion == ProtocolVersion.Http10 ? "1.0" : "1.1") + " " + (int)Response.StatusCode + " " + Response.StatusCode;
+				Headers[Index++] = "HTTP/" + (Request.Protocol == Protocol.Http10 ? "1.0" : "1.1") + " " + (int)Response.StatusCode + " " + Response.StatusCode;
 				// Set the date header.
 				Headers[Index++] = "Date: " + DateTime.Now.ToString("R");
 				// Iterate through each cookie.

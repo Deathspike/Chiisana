@@ -79,7 +79,7 @@ namespace Chiisana {
 		/// <summary>
 		/// Contains the protocol version used by the requesting client.
 		/// </summary>
-		ProtocolVersion ProtocolVersion { get; }
+		Protocol Protocol { get; }
 
 		/// <summary>
 		/// Contains the collection of query variables.

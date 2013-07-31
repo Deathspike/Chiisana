@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reidai", "Reidai\Reidai.csproj", "{92C07F8C-D656-485F-B095-EDCF2A9928E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiisana.WebSocket", "Chiisana.WebSocket\Chiisana.WebSocket.csproj", "{8DE8836C-2894-4417-BABD-355AB3BED773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{92C07F8C-D656-485F-B095-EDCF2A9928E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92C07F8C-D656-485F-B095-EDCF2A9928E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92C07F8C-D656-485F-B095-EDCF2A9928E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE8836C-2894-4417-BABD-355AB3BED773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE8836C-2894-4417-BABD-355AB3BED773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE8836C-2894-4417-BABD-355AB3BED773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE8836C-2894-4417-BABD-355AB3BED773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

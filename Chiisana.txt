@@ -1,4 +1,6 @@
 Chiisana
+	Middleware
+		+ Implement caching for file and resources.
 	+ Implement OWIN (http://owin.org/spec/owin-1.0.0.html)
 
 Chiisana.Hosting.Self
@@ -9,3 +11,6 @@ Chiisana.Hosting.Self
 		+ Add SendChunked - Gets or sets whether the response uses chunked transfer encoding.
 	HttpServer
 		+ Implement ReadTimeout for each asynchronous read operation (Not working at this point!). 
+
+Chiisana.WebSocket
+	+ Implement ping/pong to avoid time-out.

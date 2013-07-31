@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chiisana.WebSocket</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var socket = new WebSocket('ws://localhost/ws');
+			// Closing a connection.
+			socket.addEventListener('close', function (event) {
+				// Show the event.
+				console.log(event);
+			});
+			// Opening a connection.
+			socket.addEventListener('open', function (event) {
+				// Show the event.
+				console.log(event);
+				// Send a message.
+				socket.send('Hello world!');
+			});
+			// Receive a message.
+			socket.addEventListener('message', function (event) {
+				// Show the event.
+				console.log(event);
+			});
+		</script>
+	</body>
+</html>

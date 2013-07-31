@@ -3,19 +3,23 @@
 // License, version 2.0. If a copy of the MPL was not distributed with 
 // this file, you can obtain one at http://mozilla.org/MPL/2.0/.
 // ======================================================================
+using System;
 
-namespace Chiisana {
+namespace Chiisana.WebSocket {
 	/// <summary>
-	/// Represents a protocol version.
+	/// Represents a WebSocket based on an existing HTTP context.
 	/// </summary>
-	public enum ProtocolVersion : byte {
+	public interface IWebSocket : IContext {
+		#region Events
 		/// <summary>
-		/// The HTTP 1.0 protocol.
+		/// Occurs when a message is received.
 		/// </summary>
-		Http10,
+		event Action<object> Message;
+
 		/// <summary>
-		/// The HTTP 1.1 protocol.
+		/// Occurs when closed.
 		/// </summary>
-		Http11
+		event Action Close;
+		#endregion
 	}
 }

@@ -47,7 +47,13 @@
     <Compile Include="Abstract\Miscellaneous\IGroup.cs" />
     <Compile Include="Abstract\Miscellaneous\IGroupReadOnly.cs" />
     <Compile Include="Abstract\Resources\IReleasable.cs" />
-    <Compile Include="Miscellaneous\ProtocolVersion.cs" />
+    <Compile Include="Extension\ExtensionForAssembly.cs" />
+    <Compile Include="Extension\ExtensionForContext.cs" />
+    <Compile Include="Middleware\Middleware.cs" />
+    <Compile Include="Middleware\MiddlewareFile.cs" />
+    <Compile Include="Middleware\MiddlewareResource.cs" />
+    <Compile Include="MiME.cs" />
+    <Compile Include="Miscellaneous\Protocol.cs" />
     <Compile Include="Miscellaneous\Activity.cs" />
     <Compile Include="Miscellaneous\Group.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

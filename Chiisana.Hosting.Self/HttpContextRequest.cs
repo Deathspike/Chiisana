@@ -58,13 +58,13 @@ namespace Chiisana.Hosting.Self {
 		/// <param name="ProtocolVersion">The protocol version used by the requesting version.</param>
 		public HttpContextRequest(HttpServerSettings Settings, Socket Socket, Stream Stream, IGroup<string> Headers, string HttpMethod, string Url, string ProtocolVersion) {
 			// Set the stream.
-			_Stream = InputStream;
+			_Stream = Stream;
 			// Set the collection of HTTP server settings.
 			_Settings = Settings;
 			// Set the socket.
 			_Socket = Socket;
 			// Set the protocol version used by the requesting version.
-			this.ProtocolVersion = ProtocolVersion.Equals("1.0", StringComparison.Ordinal) ? Chiisana.ProtocolVersion.Http10 : Chiisana.ProtocolVersion.Http11;
+			this.Protocol = ProtocolVersion.Equals("1.0", StringComparison.Ordinal) ? Chiisana.Protocol.Http10 : Chiisana.Protocol.Http11;
 			// Set the collection of request headers.
 			this.Headers = Headers;
 			// Set the HTTP method.
@@ -287,7 +287,7 @@ namespace Chiisana.Hosting.Self {
 		/// <summary>
 		/// Contains the protocol version used by the requesting client.
 		/// </summary>
-		public ProtocolVersion ProtocolVersion { get; private set; }
+		public Protocol Protocol { get; private set; }
 
 		/// <summary>
 		/// Contains the collection of query variables.

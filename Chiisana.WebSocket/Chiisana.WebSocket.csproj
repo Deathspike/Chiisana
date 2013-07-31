@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{92C07F8C-D656-485F-B095-EDCF2A9928E3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{8DE8836C-2894-4417-BABD-355AB3BED773}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Reidai</RootNamespace>
-    <AssemblyName>Reidai</AssemblyName>
+    <RootNamespace>Chiisana.WebSocket</RootNamespace>
+    <AssemblyName>Chiisana.WebSocket</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,38 +20,37 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Build\Debug\Reidai.xml</DocumentationFile>
+    <DocumentationFile>..\Build\Debug\Chiisana.WebSocket.xml</DocumentationFile>
+    <NoWarn>1998</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Build\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Build\Release\Reidai.xml</DocumentationFile>
+    <DocumentationFile>..\Build\Release\Chiisana.WebSocket.xml</DocumentationFile>
+    <NoWarn>1998</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chiisana.Hosting.Self\Chiisana.Hosting.Self.csproj">
-      <Project>{6294e4ee-1c91-4896-8d7f-c5d0af3fc821}</Project>
-      <Name>Chiisana.Hosting.Self</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chiisana.WebSocket\Chiisana.WebSocket.csproj">
-      <Project>{8de8836c-2894-4417-babd-355ab3bed773}</Project>
-      <Name>Chiisana.WebSocket</Name>
-    </ProjectReference>
+    <Compile Include="Abstract\IWebSocket.cs" />
+    <Compile Include="Enumerator\WsFrameType.cs" />
+    <Compile Include="Extension\ExtensionForStream.cs" />
+    <Compile Include="Implementation\WsServerSettings.cs" />
+    <Compile Include="Implementation\WsClient.cs" />
+    <Compile Include="Implementation\WsServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementation\WsContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Chiisana\Chiisana.csproj">
       <Project>{fa1adedf-0b15-4485-b7f9-7eec2188d2e0}</Project>
       <Name>Chiisana</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Root\WebSocket.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
