@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA1ADEDF-0B15-4485-B7F9-7EEC2188D2E0}</ProjectGuid>
+    <ProjectGuid>{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chiisana</RootNamespace>
-    <AssemblyName>Chiisana</AssemblyName>
+    <RootNamespace>Chiisana.Middleware</RootNamespace>
+    <AssemblyName>Chiisana.Middleware</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,8 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Build\Debug\Chiisana.xml</DocumentationFile>
-    <NoWarn>1998</NoWarn>
+    <DocumentationFile>..\Build\Debug\Chiisana.Middleware.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,27 +29,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Build\Release\Chiisana.xml</DocumentationFile>
-    <NoWarn>1998</NoWarn>
+    <DocumentationFile>..\Build\Release\Chiisana.Middleware.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\Context\IContext.cs" />
-    <Compile Include="Abstract\Context\IContextRequest.cs" />
-    <Compile Include="Abstract\Context\IContextResponse.cs" />
-    <Compile Include="Abstract\Context\IProvider.cs" />
-    <Compile Include="Abstract\Middleware\IMiddleware.cs" />
-    <Compile Include="Abstract\Miscellaneous\ICookie.cs" />
-    <Compile Include="Abstract\Miscellaneous\ICookieReadOnly.cs" />
-    <Compile Include="Abstract\Miscellaneous\IGroup.cs" />
-    <Compile Include="Abstract\Miscellaneous\IGroupReadOnly.cs" />
-    <Compile Include="Abstract\Resources\IReleasable.cs" />
-    <Compile Include="Middleware\Middleware.cs" />
-    <Compile Include="Miscellaneous\Protocol.cs" />
-    <Compile Include="Miscellaneous\Activity.cs" />
-    <Compile Include="Miscellaneous\Group.cs" />
+    <Compile Include="Extension\ExtensionForAssembly.cs" />
+    <Compile Include="Extension\ExtensionForContext.cs" />
+    <Compile Include="Middleware\MiddlewareFile.cs" />
+    <Compile Include="Middleware\MiddlewareResource.cs" />
+    <Compile Include="MiME.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

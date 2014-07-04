@@ -265,7 +265,7 @@ namespace Chiisana.WebSocket {
 			// Check if a subscriber is available for a disposing event.
 			if (Disposing != null) {
 				// Raise the disposing event and wait for completion.
-				Disposing(this).Wait();
+				await Disposing(this);
 			}
 			// Check if the context has not been disposed.
 			if (!_Disposed) {
@@ -277,7 +277,7 @@ namespace Chiisana.WebSocket {
 					Close();
 				}
 				// Write a message frame to the stream.
-				_FrameAsync(WsFrameType.Close, 0).Wait();
+				await _FrameAsync(WsFrameType.Close, 0);
 				// Release the context.
 				await _Context.ReleaseAsync();
 			}

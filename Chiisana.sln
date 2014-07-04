@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reidai", "Reidai\Reidai.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiisana.WebSocket", "Chiisana.WebSocket\Chiisana.WebSocket.csproj", "{8DE8836C-2894-4417-BABD-355AB3BED773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiisana.Middleware.Module", "Chiisana.Middleware.Module\Chiisana.Middleware.Module.csproj", "{4795A7EE-00A1-415D-9663-54145F739FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiisana.Middleware", "Chiisana.Middleware\Chiisana.Middleware.csproj", "{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,14 @@ Global
 		{8DE8836C-2894-4417-BABD-355AB3BED773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DE8836C-2894-4417-BABD-355AB3BED773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DE8836C-2894-4417-BABD-355AB3BED773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4795A7EE-00A1-415D-9663-54145F739FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4795A7EE-00A1-415D-9663-54145F739FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4795A7EE-00A1-415D-9663-54145F739FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4795A7EE-00A1-415D-9663-54145F739FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BAAEC16-4089-4B4C-99A2-0F21DAEE997E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

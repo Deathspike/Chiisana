@@ -97,6 +97,18 @@ namespace Chiisana.Extension {
 		}
 
 		/// <summary>
+		/// Write a file to the stream and dispose of the context.
+		/// </summary>
+		/// <param name="Context">The HTTP context.</param>
+		/// <param name="IsAttachment">Indicates whether the file is an attachment.</param>
+		/// <param name="Name">The name.</param>
+		/// <param name="Paths">Each path.</param>
+		public static async Task<bool> FileAsync(this IContext Context, string Name, params string[] Paths) {
+			// Write a file to the stream and dispose of the context.
+			return await FileAsync(Context, false, Name, Paths);
+		}
+
+		/// <summary>
 		/// Write a redirect location and dispose of the context.
 		/// </summary>
 		/// <param name="Context">The HTTP context.</param>

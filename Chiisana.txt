@@ -14,3 +14,9 @@ Chiisana.Hosting.Self
 
 Chiisana.WebSocket
 	+ Implement ping/pong to avoid time-out.
+
+
+MiddlewareModule
+	Handlers [HttpGet]
+	Filters [Middleware]
+	Model Binding (GET-querystring, POST-form or application/json)

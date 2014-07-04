@@ -9,6 +9,13 @@ using Chiisana.WebSocket;
 using System;
 
 namespace Reidai {
+	class SampleController : Module {
+		[HttpGet]
+		public async void Index() {
+			await Context.SendAsync("Hello world!");
+		}
+	}
+
 	/// <summary>
 	/// Represents the application.
 	/// </summary>
@@ -39,6 +46,8 @@ namespace Reidai {
 			HttpServer.Middleware = new Middleware(
 				// ... with the web socket implementation ...
 				WsServer,
+				new MiddlewareModule("Home", "Index")
+					.Load(ModuleRouting.StrictAndLowerCase),
 				// ... with file serving from resources ...
 				new MiddlewareResource(new string[] { "index.htm", "index.html" }, "Root"),
 				// ... with a default handler.
